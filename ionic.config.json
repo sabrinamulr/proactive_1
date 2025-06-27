@@ -1,0 +1,8 @@
+{
+  "name": "ProActive",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "59e5eb4d"
+}
