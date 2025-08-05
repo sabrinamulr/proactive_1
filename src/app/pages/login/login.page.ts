@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import { ClientApiServiceService } from './backend/client-api.service';
+import { ClientApiServiceService } from 'src/app/backend/client-api.service';
 import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone: true,
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
+   imports: [
+    IonicModule,     // für ion-header, ion-input usw.
+    FormsModule,     // für ngModel
+  ]
 })
 export class LoginPage {
   email = '';
