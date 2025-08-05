@@ -17,9 +17,9 @@ export class ClientApiServiceService {
 
   constructor(private http: HttpClient) {}
 
-  login(email: string, password: string): Observable<any> {
-    const url = `${this.SUPABASE_URL}/auth/v1/token?grant_type=password`;
-    const body = { email, password };
-    return this.http.post(url, body, { headers: this.headers });
+  login(benutzername: string, passwort: string): Observable<any> {
+    const url = `${this.SUPABASE_URL}/rest/v1/tbl_benutzer?benutzername=eq.${benutzername}&passwort=eq.${passwort}&aktiv=is.true`;
+
+    return this.http.get(url, { headers: this.headers });
   }
 }
